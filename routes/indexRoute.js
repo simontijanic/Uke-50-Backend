@@ -3,6 +3,8 @@ const hockeyCard = require("../models/hockeyCard");
 const User = require("../models/userSchema");
 const authenticate = require("../middleware/authenticate")
 
+const jwt = require('jsonwebtoken'); 
+
 router.get("/", authenticate, async (req, res) => {
   try {
     const items = await hockeyCard.find();
