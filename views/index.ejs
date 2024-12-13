@@ -9,17 +9,21 @@
 <body>
     <div class="container">
         <div class="cards">
-            <div class="card">
-                <div class="image">
-                    <img src="images/iStock-479719152.jpg" alt="Jimmy">
+            <% items.forEach(item => { %>
+                <div class="card">
+                    <div class="image">
+                        <img src="images/iStock-479719152.jpg" alt="Jimmy">
+                    </div>
+                    <div class="text">
+                        <h2><%= item.team %></h2>
+                        <h3><%= item.name %> - <%= item.age %> years old</h3>
+                        <p><%= item.description %></p>
+                    </div>
                 </div>
-                <div class="text">
-                    <h2>NAVN</h2>
-                    <h3>Undertittel</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam veritatis vel alias, quasi in reiciendis molestias delectus excepturi praesentium a amet quisquam nemo culpa totam odio nostrum voluptate corrupti distinctio.</p>
-                </div>
-            </div>
+            <% }) %>        
         </div>
     </div>
+
+
 </body>
 </html>
