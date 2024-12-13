@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const hockeyCard = require("../models/hockeyCard");
 
-router.get("/", async (req, res) => {
+router.get("/api", async (req, res) => {
   try {
     const items = await hockeyCard.find();
     console.log("Items from the database:", items);  // Log the items fetched from DB
