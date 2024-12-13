@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const hockeyCard = require("../models/hockeyCard");
 
-router.get("/api", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const items = await hockeyCard.find();
     console.log("Items from the database:", items);  // Log the items fetched from DB
@@ -14,5 +14,6 @@ router.get("/api", async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch items' });
   }
 });
+
 
 module.exports = router;
