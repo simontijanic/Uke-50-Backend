@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
 exports.connect = () => {
-    return mongoose.connect('mongodb://localhost:27017/hockeyDB', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
+    return mongoose.connect('mongodb://localhost:27017/hockeyDB')
     .then(() => {
         console.log('Connected to MongoDB');
     })
