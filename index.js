@@ -19,13 +19,7 @@ app.use(
   })
 );
 
-dbController
-  .connect()
-  .then(() => {
-    app.listen(8000, () => {
-      console.log("Server is listening on port 8000");
-    });
-  })
-  .catch((error) => {
-    console.error("Error connecting to the database:", error);
-  });
+app.listen(8000, () => {
+    dbController.connect();
+    console.log("Server is listening on port 8000");
+});
